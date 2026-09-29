@@ -71,8 +71,8 @@ footer { padding:40px 0; text-align:center; border-top:1px solid var(--border-co
 
 <section class="hero"><div class="container">
 <h1>Your Daily Stopping Points.</h1>
-<p>Mawaqif is a calm, clutter-free prayer times app that helps you stay present, not just reminded. Accurate anywhere, with a beautiful timeline UI and a focus mode that blocks distractions.</p>
-<a href="#" class="cta-button">Download on Google Play</a>
+<p>Mawaqif is a calm, clutter-free prayer times app that helps you stay present, not just reminded. Currently in closed testing — join the waitlist to be among the first to try it.</p>
+<button class="cta-button" onclick="openBooking()">Join the Waitlist</button>
 </div></section>
 
 <section id="features" class="features"><div class="container">
@@ -98,7 +98,7 @@ footer { padding:40px 0; text-align:center; border-top:1px solid var(--border-co
 <div class="availability">Available for free sessions: <strong>1:30 PM - 10:30 PM</strong> (Saudi time)</div>
 <div class="contact-info">
 <a href="tel:+966556623652" class="contact-link">+966 55 662 3652</a>
-<button class="cta-button" onclick="openBooking()">Book a Free Session</button>
+<button class="cta-button" onclick="openBooking()">Join the Waitlist</button>
 <p class="discord-placeholder">Discord invite link coming soon!</p>
 </div></div></section>
 
@@ -106,13 +106,13 @@ footer { padding:40px 0; text-align:center; border-top:1px solid var(--border-co
 
 <div class="modal-overlay" id="bookingModal"><div class="modal">
 <button class="close-btn" onclick="closeBooking()">&times;</button>
-<h3>Book a Free Session</h3>
-<p class="modal-sub">Drop your email or phone number and I'll get back to you within 24 hours (Saudi time: 1:30 PM - 10:30 PM).</p>
+<h3>Get Notified</h3>
+<p class="modal-sub">Drop your email or phone and I'll ping you the moment Mawaqif is live on Google Play. (You can also use this to book a free build session — just mention it in the message.)</p>
 <form id="bookingForm">
 <div><label for="name">Your name (optional)</label><input type="text" id="name" placeholder="Umar"></div>
 <div><label for="contact">Email or phone number</label><input type="text" id="contact" placeholder="you@example.com or +966..." required></div>
 <div><label for="message">What do you want to talk about? (optional)</label><textarea id="message" placeholder="I'm building an app and stuck on..."></textarea></div>
-<button type="submit" class="submit-btn" id="submitBtn">Send Booking</button>
+<button type="submit" class="submit-btn" id="submitBtn">Notify Me</button>
 <div class="status-msg" id="statusMsg"></div>
 </form>
 </div></div>
@@ -136,7 +136,7 @@ const data = await res.json();
 if (data.success) { statusMsg.textContent="Got it! I'll be in touch soon, insha'Allah."; statusMsg.className='status-msg success'; form.reset(); setTimeout(closeBooking,2500); }
 else { statusMsg.textContent='Error: '+(data.error||'Something went wrong.'); statusMsg.className='status-msg error'; }
 } catch(err) { statusMsg.textContent='Network error. Please try again.'; statusMsg.className='status-msg error'; }
-finally { submitBtn.disabled=false; submitBtn.textContent='Send Booking'; }
+finally { submitBtn.disabled=false; submitBtn.textContent='Notify Me'; }
 });
 </script>
 </body>
