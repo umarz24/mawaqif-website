@@ -128,7 +128,7 @@ function closeBooking() { modal.classList.remove('active'); }
 modal.addEventListener('click',(e)=>{ if(e.target===modal) closeBooking(); });
 document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeBooking(); });
 form.addEventListener('submit', async (e)=>{
-e.preventDefault(); submitBtn.disabled=true; submitBtn.textContent='Sending...'; statusMsg.textContent=''; statusMsg.className='status-msg';
+e.preventDefault(); submitBtn.disabled=true; submitBtn.textContent='Waking up server (up to 30s)...'; statusMsg.textContent=''; statusMsg.className='status-msg';
 const payload = { name: document.getElementById('name').value.trim(), contact: document.getElementById('contact').value.trim(), message: document.getElementById('message').value.trim() };
 try {
 const res = await fetch(BACKEND_URL + '/api/book', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
