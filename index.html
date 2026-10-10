@@ -14,7 +14,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1;opac
 header{position:sticky;top:0;z-index:50;padding:20px 0;background:rgba(10,10,10,0);border-bottom:1px solid transparent;transition:all .4s ease}
 header.scrolled{padding:14px 0;background:rgba(10,10,10,.88);backdrop-filter:blur(14px);border-bottom-color:var(--borders)}
 nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:1.35rem;font-weight:700;color:var(--cream);letter-spacing:.5px;transition:font-size .4s}
+.logo{display:inline-flex;align-items:center;gap:10px;font-size:1.35rem;font-weight:700;color:var(--cream);letter-spacing:.5px;transition:font-size .4s}
 header.scrolled .logo{font-size:1.2rem}
 .logo span{color:var(--gold)}
 .nav-links{display:flex;gap:26px;align-items:center}
@@ -161,7 +161,7 @@ textarea{resize:vertical;min-height:80px}
 <body>
 
 <header id="nav"><div class="container"><nav>
-<div class="logo">Mawaqif<span>.</span></div>
+<div class="logo"><svg width="26" height="26" viewBox="0 0 28 28" fill="none" style="flex-shrink:0;"><path d="M20 4.5A10 10 0 1 0 20 23.5A7.5 7.5 0 0 1 20 4.5Z" fill="none" stroke="#c9a15a" stroke-width="1.6" stroke-linejoin="round"/><circle cx="22" cy="8" r="1.4" fill="#c9a15a"/></svg>Mawaqif<span>.</span></div>
 <div class="nav-links">
 <a href="#demo">See it</a>
 <a href="#how">How it works</a>
@@ -348,3 +348,4 @@ statusEl.className="status err";
 </script>
 </body>
 </html>
+
